@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order - Jallah & Makih Pizza Palace</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="home.html">Home</a> 
+        <a href="order.html">Order</a> 
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Order Your Favorite Pizza</h1>
+
+    <form action="#" method="post">
+        <h2>Customer Information</h2>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="firstName"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="lastName"></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="text" name="phone"></td>
+            </tr>
+        </table>
+
+        <h2>Pizza Size</h2>
+        <select name="pizzaSize">
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>Extra Large</option>
+        </select>
+
+        <h2>Crust Style</h2>
+        <input type="radio" name="crust" value="thin"> Thin Crust<br>
+        <input type="radio" name="crust" value="handTossed"> Hand Tossed<br>
+
+        <h2>Toppings</h2>
+        <input type="checkbox"> Pepperoni<br>
+        <input type="checkbox"> Sausage<br>
+        <input type="checkbox"> Mushrooms<br>
+
+        <br>
+        <input type="submit" value="Submit Order">
+        <input type="reset" value="Reset">
+    </form>
+
+    <footer>
+        <p>© 2026 Eric & Makih Pizza Palace</p>
+    </footer>
+
+</body>
+</html>
