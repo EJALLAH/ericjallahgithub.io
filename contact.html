@@ -2,29 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Order - Jallah & Makih Pizza Palace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jallah & Makih Pizza Palace</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <nav>
-        <a href="home.html">Home</a> 
-        <a href="order.html">Order</a> 
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+    <nav class="navbar">
+        <div class="logo">J&M Pizza</div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="special.html">Special</a>
+            <a href="order.html">Order</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
 
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
+    <header class="contact-hero">
+
+        <div class="hero-overlay">
             <h1>Contact Us</h1>
-            <p>Call us or stop by for the best pizza in town!</p>
-            <p>📞 (123) 456-7890</p>
-            <p>📍 Your City, USA</p>
+
+            <p>We would love to hear from you.</p>
         </div>
+
+    </header>
+
+    <section class="contact-section">
+
+        <div class="contact-info">
+
+            <h2>Visit Our Restaurant</h2>
+
+            <p><strong>Address:</strong> 123 Pizza Street, Pittsburgh, PA</p>
+
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+
+            <p><strong>Email:</strong> jmpizzapalace@email.com</p>
+
+            <p><strong>Hours:</strong> Mon - Sun | 10:00 AM - 11:00 PM</p>
+
+            <div class="contact-image">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop" alt="Restaurant Interior">
+            </div>
+
+        </div>
+
+        <form>
+
+            <h2>Send Us a Message</h2>
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea rows="6" placeholder="Write your message here..."></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
     </section>
 
     <footer>
-        <p>© 2026 Eric & Makih Pizza Palace</p>
+        <p>© 2026 J&M Pizza Palace</p>
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
+</html>

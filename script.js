@@ -1,13 +1,55 @@
-function showMessage() {
-    // Grabs the value from the input field
-    let name = document.getElementById("nameInput").value;
+let cart = [];
+let total = 0;
 
-    // Checks if the user actually typed something
-    if (name === "") {
-        document.getElementById("welcomeText").innerHTML =
-        "Welcome! Enter your name in the box.";
+function addToCart(name, price) {
+    cart.push({ name, price });
+    total += price;
+    updateCart();
+}
+
+function updateCart() {
+    const list = document.getElementById("cartItems");
+    const totalText = document.getElementById("cartTotal");
+
+    if (!list || !totalText) return;
+
+    list.innerHTML = "";
+
+    cart.forEach((item, index) => {
+        let li = document.createElement("li");
+
+        li.innerHTML = `
+            ${item.name} - $${item.price.toFixed(2)}
+            <button class="remove-btn" onclick="removeItem(${index})">X</button>
+        `;
+
+        list.appendChild(li);
+    });
+
+    totalText.textContent = "Total: $" + total.toFixed(2);
+}
+
+function removeItem(index) {
+    total -= cart[index].price;
+    cart.splice(index, 1);
+    updateCart();
+}
+
+function toggleCart() {
+    const panel = document.getElementById("cartPanel");
+    if (panel) panel.classList.toggle("active");
+}
+
+/* Welcome message */
+function showMessage() {
+    let name = document.getElementById("nameInput")?.value;
+    let text = document.getElementById("welcomeText");
+
+    if (!text) return;
+
+    if (!name) {
+        text.innerHTML = "Welcome! Enter your name.";
     } else {
-        document.getElementById("welcomeText").innerHTML =
-        "Welcome " + name + "! Thanks for visiting our pizza palace.";
+        text.innerHTML = "Welcome " + name + "!";
     }
 }

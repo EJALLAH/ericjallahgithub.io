@@ -7,57 +7,104 @@
 </head>
 <body>
 
-    <nav>
-        <a href="home.html">Home</a> 
-        <a href="order.html">Order</a> 
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+    <nav class="navbar">
+        <div class="logo">J&M Pizza</div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="special.html">Special</a>
+            <a href="order.html">Order</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
 
-    <h1>Order Your Favorite Pizza</h1>
+    <h1>Order Your Pizza</h1>
 
-    <form action="#" method="post">
-        <h2>Customer Information</h2>
-        <table>
-            <tr>
-                <td>First Name:</td>
-                <td><input type="text" name="firstName"></td>
-            </tr>
-            <tr>
-                <td>Last Name:</td>
-                <td><input type="text" name="lastName"></td>
-            </tr>
-            <tr>
-                <td>Phone Number:</td>
-                <td><input type="text" name="phone"></td>
-            </tr>
-        </table>
+    <section class="order-layout">
 
-        <h2>Pizza Size</h2>
-        <select name="pizzaSize">
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
-            <option>Extra Large</option>
-        </select>
+        <div class="menu-section">
 
-        <h2>Crust Style</h2>
-        <input type="radio" name="crust" value="thin"> Thin Crust<br>
-        <input type="radio" name="crust" value="handTossed"> Hand Tossed<br>
+            <div class="menu-item">
+                <img src="cheese.jpg">
+                <h2>Cheese Pizza</h2>
+                <p>$12.99</p>
+                <button onclick="addToCart('Cheese Pizza',12.99)">Add</button>
+            </div>
 
-        <h2>Toppings</h2>
-        <input type="checkbox"> Pepperoni<br>
-        <input type="checkbox"> Sausage<br>
-        <input type="checkbox"> Mushrooms<br>
+            <div class="menu-item">
+                <img src="ranchpizza.jpg">
+                <h2>Ranch Pizza</h2>
+                <p>$15.99</p>
+                <button onclick="addToCart('Ranch Pizza',15.99)">Add</button>
+            </div>
 
-        <br>
-        <input type="submit" value="Submit Order">
-        <input type="reset" value="Reset">
-    </form>
+            <div class="menu-item">
+                <img src="buffalo.jpg">
+                <h2>Buffalo Pizza</h2>
+                <p>$13.99</p>
+                <button onclick="addToCart('Buffalo Pizza',13.99)">Add</button>
+            </div>
 
-    <footer>
-        <p>© 2026 Eric & Makih Pizza Palace</p>
-    </footer>
+
+            <div class="menu-item">
+                <img src="peppizza.jpg">
+                <h2>Pepperoni Pizza</h2>
+                <p>$14.99</p>
+                <button onclick="addToCart('Pepperoni Pizza',14.99)">Add</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="veggiepizza.jpg">
+                <h2>Veggie Pizza</h2>
+                <p>$13.49</p>
+                <button onclick="addToCart('Veggie Pizza',13.49)">Add</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="bbqpizza.jpg">
+                <h2>BBQ Chicken Pizza</h2>
+                <p>$16.99</p>
+                <button onclick="addToCart('BBQ Chicken Pizza',16.99)">Add</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="meat.jpg">
+                <h2>Meat Lovers Pizza</h2>
+                <p>$17.99</p>
+                <button onclick="addToCart('Meat Lovers Pizza',17.99)">Add</button>
+            </div>
+
+        </div>
+
+        <div class="checkout">
+
+            <h2>Your Order</h2>
+            <ul id="cartItems"></ul>
+            <p id="cartTotal">Total: $0.00</p>
+
+            <h2>Delivery Info</h2>
+
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Phone Number" required>
+                <input type="text" placeholder="Address" required>
+
+                <select>
+                    <option>Delivery</option>
+                    <option>Pickup</option>
+                </select>
+
+                <button type="submit">Place Order</button>
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>© 2026 J&M Pizza</footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

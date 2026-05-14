@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Menu - Pizza Palace</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="cartPanel" class="cart-panel">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p id="cartTotal">Total: $0.00</p>
+    <button onclick="toggleCart()">Close</button>
+</div>
+
+<button class="cart-toggle" onclick="toggleCart()">🛒</button>
+
+<nav class="navbar">
+    <div class="logo">J&M Pizza</div>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="special.html">Special</a>
+        <a href="order.html">Order</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<header class="hero-about">
+    <h1>Our Menu</h1>
+</header>
+
+<section class="menu-section">
+
+    <div class="menu-item">
+        <img src="creamcake.jpeg">
+        <h2>Cream Cake</h2>
+        <p>$12.99</p>
+        <button onclick="addToCart('Cream Cake', 12.99)">Add</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="breadstick.jpeg">
+        <h2>Bread Stick</h2>
+        <p>$15.99</p>
+        <button onclick="addToCart('Bread Stick', 15.99)">Add</button>
+    </div>
+
+    <div class="menu-item">
+        <img src="phillycheesesteak.jpg">
+        <h2>Cheesesteak</h2>
+        <p>$13.99</p>
+        <button onclick="addToCart('Cheesesteak', 13.99)">Add</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 J&M Pizza Palace</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
